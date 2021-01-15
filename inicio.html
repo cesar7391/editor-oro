@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Firebase CRUD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link href="estilos/inicio.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <div class="topnav">
+        <a class="active" href="inicio.html">Posts</a>
+        <a href="reporteros.html">Reporteros</a>
+        <a href="video.html">Transmision YouTube</a>
+        <button class="btn btn-primary" onclick="signOut()" id="signOut"> Cerrar Sesión </button>     
+      </div>
+
+    <div class="container p-4">DATOS DE LA PUBLICACIÓN
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="tabla">
+
+                            <div class="form-group">                    
+                                <input type="text" id="task-titulo" class="form-control"
+                                placeholder="Título" autofocus disabled>                    
+                            </div>
+
+                            <div>
+                                <select name="categoria" id="task-categoria" rows="3" class="form-control" disabled>
+                                    <option value="LOCAL">LOCAL</option>
+                                    <option value="REGIONES">REGIONES</option>
+                                    <option value="NACIONAL">NACIONAL</option>
+                                    <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
+                                    <option value="POLÍTICA">POLÍTICA</option>
+                                    <option value="CULTURA">CULTURA</option>
+                                    <option value="CIENCIA">CIENCIA</option>
+                                    <option value="GASTRONOMÍA">GASTRONOMÍA</option>
+                                    <option value="DEPORTES">DEPORTES</option>
+                                    <option value="TECNOLOGÍA">TECNOLOGÍA</option>
+                                    <option value="SALUD">SALUD</option>
+                                    <option value="OPINIÓN">OPINIÓN</option>
+                                  </select>
+                            </div>
+                            <br/>
+
+                            <div class="form-group">                    
+                                <textarea id="task-descripcion" class="form-control disabled"
+                                placeholder="Descripción" disabled></textarea>                  
+                            </div>
+                            
+                            <div>
+                                <select name="categoria" id="task-estado" rows="3" class="form-control" disabled>
+                                    <option class="myGreen" value="true">APROBADA</option>
+                                    <option class="myRed" value="false">DENEGADA</option>
+                                  </select>
+                            </div>
+                            <br/>
+
+                            <button class="btn btn-primary" id="boton-tabla" disabled>Actualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="contenedor"></div>
+        </div>   
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAon9_kStpk5Wljxk5jDCi4zOMjswLwLVs",
+    authDomain: "oronoticias-f990a.firebaseapp.com",
+    databaseURL: "https://oronoticias-f990a.firebaseio.com",
+    projectId: "oronoticias-f990a",
+    storageBucket: "oronoticias-f990a.appspot.com",
+    messagingSenderId: "649049354655",
+    appId: "1:649049354655:web:d1708190f08865ccc44daa"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script src="js/inicio.js"></script>
+
+</body>
+</html>

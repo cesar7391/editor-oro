@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> INICIO </title>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+        <script src="js/index.js"></script>
+        <link href="estilos/index.css" rel="stylesheet" type="text/css">
+        <style>
+            h1 { color: #ffffff; text-align: center;}
+          </style>
+    </head>
+    <body>
+        <h1>BIENVENIDO</h1>
+        <center><img src="images/orologo.png"></center>
+    </br>
+            <input type="email" name="u" placeholder="Correo Electrónico" id="email"/>
+            <input type="password" name="p" placeholder="Contraseña" id="password"/>
+        </br>
+            <button class="btn btn-primary" onclick="signIn()" id="signIn"> Iniciar Sesión </button>       
+    </body>
+</html>

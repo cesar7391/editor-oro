@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Video Transmisión</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link href="estilos/inicio.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="inicio.html">Posts</a>
+        <a href="reporteros.html">Reporteros</a>
+        <a class="active" href="video.html">Transmision YouTube</a>
+        <button class="btn btn-primary" onclick="signOut()" id="signOut"> Cerrar Sesión </button>     
+      </div>
+
+    <div class="container p-4">NUEVA URL PARA TRANSMITIR
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="tabla">
+                            <div class="form-group">
+                    
+                                <input type="text" id="task-url" class="form-control"
+                                placeholder="Url del video" autofocus disabled>
+                    
+                            </div>
+                            
+                            <div class="form-group">
+
+                                <button class="btn btn-primary" id="btn-tabla" disabled>
+                                    Actualizar
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="contenedor"></div>
+        </div>   
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAon9_kStpk5Wljxk5jDCi4zOMjswLwLVs",
+    authDomain: "oronoticias-f990a.firebaseapp.com",
+    databaseURL: "https://oronoticias-f990a.firebaseio.com",
+    projectId: "oronoticias-f990a",
+    storageBucket: "oronoticias-f990a.appspot.com",
+    messagingSenderId: "649049354655",
+    appId: "1:649049354655:web:d1708190f08865ccc44daa"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script src="js/video.js"></script>
+
+</body>
+</html>
